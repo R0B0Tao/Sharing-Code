@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[31]:
-
-
 import os
 import pandas as pd
 import glob
