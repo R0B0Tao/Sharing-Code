@@ -40,10 +40,3 @@ for csv_file in glob.glob(os.path.join(output_folder, '*.csv')):
     df.to_excel(xlsx_file, index=False)
 
     print(f"File Saved: {xlsx_file}")
-
-
-# In[ ]:
-
-
-
-
