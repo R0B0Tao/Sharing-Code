@@ -20,12 +20,12 @@ selected_column_position = 1
 for csv_file in csv_files:
     file_path = os.path.join(input_folder, csv_file)
 
-    # header=抽出したい行目
-    # ここは2行目 → header=1（行数は0から）
+    # header=抽出したい行目（何行目から）
+    # ここは2行目から → header=1（行数は0から）
     df = pd.read_csv(file_path, header=1, encoding='utf-8')
    
     # 抽出したいデータを指定
-    # ここは5より小さい値を抽出 → selected_column_position] < 5
+    # ここは5より小さい値を抽出 → [:, selected_column_position] < 5
     selected_rows_whole_df = df[df.iloc[:, selected_column_position] < 5]
     
     file_name = os.path.splitext(csv_file)[0]
